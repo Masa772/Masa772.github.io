@@ -8,6 +8,15 @@
   </head>
   <body>
     <div class="electric-line"></div>
+    <script>
+for (let i = 0; i < 10; i++) {
+  const line = document.createElement("div");
+  line.className = "electric-line";
+  line.style.top = `${Math.random() * 100}vh`;
+  line.style.animationDelay = `${Math.random() * 1.5}s`;
+  document.body.appendChild(line);
+}
+</script>
     
     <h1>マサヒロのプロフィール</h1>
     
