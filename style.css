@@ -20,6 +20,34 @@ body {
   padding: 30px;
   color: #333;
 }
+body{
+        margin:0;
+        background:#000;
+        overflow:hidden;
+}
+
+.electric-line{
+        position:fixed;
+        top:0;
+        left:-200px;
+        width:200px;
+        height:2px;
+        background:linear-gradient(90deg,transparent,#00eaff,transparent);
+        animation:electricMove 2s linear infinite;
+        opacity:0.7;
+}
+
+@keyframes electricMove{
+        0%{
+                transform:translateX(0) translateY(20vh);
+        }
+        50%{
+                transform:translateX(120vw)translateY(50vh);
+        }
+        100%{
+                transform:translateX(0)translateY(80vh);
+        }
+}
 
 /* --------------------
         見出し
