@@ -2,25 +2,48 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>Masahiro のサンプルページ</title>
+  <title>プロフィール | masahiro</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>ようこそ！Masahiro のページへ</h1>
+    <h1>プロフィール</h1>
   </header>
-<canvas id="leaves"></canvas>
+
   <main>
-    <section class="card">
-      <h2>自己紹介</h2>
-      <p>これは HTML / CSS / JavaScript で作成したサンプルページです。</p>
-      <button id="helloBtn">クリックしてメッセージを見る</button>
-      <p id="message" class="hidden"></p>
+    <section class="profile">
+      <img src="profile.jpg" alt="プロフィール写真" class="profile-img" />
+      <h2>masahiro</h2>
+      <p class="major">専攻：電気工学</p>
+      <p class="intro">
+        電気工学を中心に学んでおり、現在は電験一種の取得を目指して勉強中です。
+        論理的に考えることが好きで、Web制作にも興味があります。
+      </p>
+    </section>
+
+    <section class="details">
+      <h3>基本情報</h3>
+      <ul>
+        <li>出身：京都府宇治市</li>
+        <li>趣味：プログラミング、筋トレ、カフェ巡り</li>
+        <li>興味分野：電力システム、制御工学、Web技術</li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h3>連絡先</h3>
+      <p>Email: example@example.com</p>
+    </section>
+
+    <section class="counter">
+      <h3>アクセスカウンター</h3>
+      <button id="countBtn">カウントを増やす</button>
+      <p id="countText">訪問数: 0</p>
     </section>
   </main>
 
   <footer>
-    <small>&copy; 2026 Masahiro</small>
+    <p>&copy; 2026 masahiro</p>
   </footer>
 
   <script src="script.js"></script>
