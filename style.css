@@ -19,7 +19,11 @@ body {
   padding: 30px;
   color: #333;
 }
-
+body{
+        margin:0;
+        background:#088;
+        overflow:hidden;
+}
 
 .electric-line{
         position:fixed;
