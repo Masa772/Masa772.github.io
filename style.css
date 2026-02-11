@@ -1,72 +1,77 @@
-/* 背景アニメーション（自然の光が揺れるイメージ） */
+/* --------------------
+        全体
+-------------------- */
+
+:root {
+  --theme-color: #00a0a0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  color: #fff;
-  background: linear-gradient(120deg, #4caf50, #81c784, #a5d6a7);
-  background-size: 300% 300%;
-  animation: bgMove 20s ease-in-out infinite alternate;
+  padding: 30px;
+  color: #333;
 }
 
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+/* --------------------
+        見出し
+-------------------- */
+
+h1, h2, h3 {
+  color: var(--theme-color);
+  border-bottom: dashed 0.1em var(--theme-color);
 }
 
-/* ヘッダー */
-header {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  text-align: center;
-  backdrop-filter: blur(4px);
+/* --------------------
+        リンク
+-------------------- */
+
+a {
+  color: var(--theme-color);
+  text-decoration: none;
 }
 
-/* メインコンテンツ */
-main {
-  width: 90%;
-  max-width: 800px;
-  margin: 30px auto;
-}
+/* --------------------
+        リスト
+-------------------- */
 
-/* 各セクション共通 */
-section {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 20px;
-  backdrop-filter: blur(6px);
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* プロフィール写真 */
-.profile {
-  text-align: center;
-}
-
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255,255,255,0.7);
-  margin-bottom: 15px;
-}
-
-/* 見出し */
-h3 {
-  margin-top: 0;
-}
-
-/* リスト */
 ul {
-  padding-left: 20px;
+  list-style: none;
+}
+li:before {
+  content: "★";
+  color: var(--theme-color);
 }
 
-/* フッター */
-footer {
-  text-align: center;
-  padding: 20px;
+/* --------------------
+          表
+-------------------- */
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: solid 1px #f0f0f0;
+  min-width: 70%;
+}
+tr {
+  background-color: #fff;
+}
+tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+th {
+  background: var(--theme-color);
   color: #fff;
-  opacity: 0.8;
+}
+th, td {
+  border: solid 1px #f0f0f0;
+  padding: 0.5rem;
 }
