@@ -25,27 +25,44 @@ body{
         overflow:hidden;
 }
 
-.electric-line{
-        position:fixed;
-        top:0;
-        left:-200px;
-        width:200px;
-        height:2px;
-        background:linear-gradient(90deg,transparent,#00eaff,transparent);
-        animation:electricMove 2s linear infinite;
-        opacity:0.7;
+.electric-line {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 220px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00eaff, #00ffff, transparent);
+  animation: electricMove 1.2s linear infinite,
+             electricShake 0.15s infinite;
+  opacity: 0.9;
+  filter: blur(1px);
+  box-shadow: 0 0 15px #00eaff, 0 0 25px #00eaff;
 }
 
-@keyframes electricMove{
-        0%{
-                transform:translateX(0) translateY(20vh);
-        }
-        50%{
-                transform:translateX(120vw)translateY(50vh);
-        }
-        100%{
-                transform:translateX(0)translateY(80vh);
-        }
+/* 走行パターン：上下に大きく揺れながら高速移動 */
+@keyframes electricMove {
+  0% {
+    transform: translateX(0) translateY(10vh);
+  }
+  25% {
+    transform: translateX(40vw) translateY(60vh);
+  }
+  50% {
+    transform: translateX(120vw) translateY(30vh);
+  }
+  75% {
+    transform: translateX(60vw) translateY(80vh);
+  }
+  100% {
+    transform: translateX(0) translateY(20vh);
+  }
+}
+
+/* 電気のバチバチ揺れ */
+@keyframes electricShake {
+  0% { transform: translateY(-2px); }
+  50% { transform: translateY(2px); }
+  100% { transform: translateY(-2px); }
 }
 
 /* --------------------
