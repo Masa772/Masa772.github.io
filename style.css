@@ -27,44 +27,42 @@ body{
 
 .electric-line {
   position: fixed;
-  top: 0;
-  left: -200px;
-  width: 220px;
+  width: 200px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #00eaff, #00ffff, transparent);
-  animation: electricMove 1.2s linear infinite,
-             electricShake 0.15s infinite;
+  background: linear-gradient(90deg, transparent, #00eaff, #ffffff, #00eaff, transparent);
   opacity: 0.9;
   filter: blur(1px);
-  box-shadow: 0 0 15px #00eaff, 0 0 25px #00eaff;
+  box-shadow: 0 0 15px #00eaff, 0 0 30px #00eaff;
+  animation: electricMove 1.2s linear infinite;
 }
 
-/* 走行パターン：上下に大きく揺れながら高速移動 */
+/* 激しく動く電気の軌跡 */
 @keyframes electricMove {
   0% {
-    transform: translateX(0) translateY(10vh);
+    transform: translateX(-20vw) translateY(10vh);
+    margin-top: -2px;
   }
-  25% {
-    transform: translateX(40vw) translateY(60vh);
+  20% {
+    transform: translateX(30vw) translateY(60vh);
+    margin-top: 3px;
   }
-  50% {
-    transform: translateX(120vw) translateY(30vh);
+  40% {
+    transform: translateX(120vw) translateY(20vh);
+    margin-top: -4px;
   }
-  75% {
-    transform: translateX(60vw) translateY(80vh);
+  60% {
+    transform: translateX(70vw) translateY(80vh);
+    margin-top: 5px;
+  }
+  80% {
+    transform: translateX(10vw) translateY(40vh);
+    margin-top: -3px;
   }
   100% {
-    transform: translateX(0) translateY(20vh);
+    transform: translateX(-20vw) translateY(10vh);
+    margin-top: 2px;
   }
 }
-
-/* 電気のバチバチ揺れ */
-@keyframes electricShake {
-  0% { transform: translateY(-2px); }
-  50% { transform: translateY(2px); }
-  100% { transform: translateY(-2px); }
-}
-
 /* --------------------
         見出し
 -------------------- */
